@@ -32,6 +32,44 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 </details>
 
+## [3.0.4] - 2026-10-07
+
+**Security**
+
+- Limit the nesting depth of braces and parentheses to 100. Deeper input now throws a `SyntaxError` instead of exhausting the call stack in the recursive `compile`, `expand` and `stringify` walkers ([GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm)).
+
+**Fixed**
+
+- Correctly handle unpaired quotes: an unpaired quote is now consumed as a regular character (#56, #57).
+- Fix set expansion when the set starts with a range operator, by resetting the invalid flag of a block when a comma is found (#48, #49).
+
+**Changed**
+
+- Require Node.js >= 8.3 in `engines`.
+- CI moved from Travis to GitHub Actions (#47).
+
+## [3.0.3] - 2024-05-21
+
+**Security**
+
+- Set `maxLength` default to 10,000 (previously 64 KiB). See #40 and [SNYK-JS-BRACES-6838727](https://security.snyk.io/vuln/SNYK-JS-BRACES-6838727).
+
+**Changed**
+
+- Bump `fill-range` to `^7.1.1`.
+- `braces.compile` now passes `strictZeros: true` to `fill-range`.
+- Update the `keepEscaping` documentation (#27).
+
+## [3.0.2] - 2019-04-16
+
+- No functional changes (version bump only).
+
+## [3.0.1] - 2019-04-10
+
+**Fixed**
+
+- Ensure square brackets are matched: nested `[` and `]` are now counted, so a bracket expression ends at its matching `]`.
+
 ## [3.0.0] - 2018-04-08
 
 v3.0 is a complete refactor, resulting in a faster, smaller codebase, with fewer deps, and a more accurate parser and compiler.
@@ -157,6 +195,10 @@ v3.0 is a complete refactor, resulting in a faster, smaller codebase, with fewer
 
 - first commit
 
+[3.0.4]: https://github.com/Im-Fran/braces/compare/3.0.3...3.0.4
+[3.0.3]: https://github.com/micromatch/braces/compare/3.0.2...3.0.3
+[3.0.2]: https://github.com/micromatch/braces/compare/3.0.1...3.0.2
+[3.0.1]: https://github.com/micromatch/braces/compare/abcf341...3.0.1
 [2.3.2]: https://github.com/micromatch/braces/compare/2.3.1...2.3.2
 [2.3.1]: https://github.com/micromatch/braces/compare/2.3.0...2.3.1
 [2.3.0]: https://github.com/micromatch/braces/compare/2.2.1...2.3.0
@@ -181,5 +223,5 @@ v3.0 is a complete refactor, resulting in a faster, smaller codebase, with fewer
 [1.0.0]: https://github.com/micromatch/braces/compare/0.1.4...1.0.0
 [0.1.4]: https://github.com/micromatch/braces/compare/0.1.0...0.1.4
 
-[Unreleased]: https://github.com/micromatch/braces/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/Im-Fran/braces/compare/3.0.4...HEAD
 [keep-a-changelog]: https://github.com/olivierlacan/keep-a-changelog
