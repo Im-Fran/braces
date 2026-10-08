@@ -32,6 +32,20 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 </details>
 
+## [3.0.5] - 2026-10-08
+
+**Security**
+
+- Limit the nesting depth in the `compile`, `expand` and `stringify` walkers too, not only in `parse`. ASTs passed directly to `braces.compile`, `braces.expand` and `braces.stringify` skipped the parser's check and could still exhaust the call stack. Deep or cyclic ASTs now throw the same `SyntaxError` as strings ([GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm), CVE-2026-93687).
+
+**Added**
+
+- `options.maxDepth` to lower the nesting depth limit (default and maximum: `100`). Values that are not integers `>= 1` throw a `TypeError`.
+
+**Changed**
+
+- Published on npm as [`@franciscosolis/braces`](https://www.npmjs.com/package/@franciscosolis/braces), a maintained fork of `braces`, since upstream declined to fix the vulnerability ([micromatch/braces#70](https://github.com/micromatch/braces/issues/70)). Use it through an `npm:` alias override; see "About this fork" in the README.
+
 ## [3.0.4] - 2026-10-07
 
 **Security**
@@ -195,6 +209,7 @@ v3.0 is a complete refactor, resulting in a faster, smaller codebase, with fewer
 
 - first commit
 
+[3.0.5]: https://github.com/Im-Fran/braces/compare/3.0.4...v3.0.5
 [3.0.4]: https://github.com/Im-Fran/braces/compare/3.0.3...3.0.4
 [3.0.3]: https://github.com/micromatch/braces/compare/3.0.2...3.0.3
 [3.0.2]: https://github.com/micromatch/braces/compare/3.0.1...3.0.2
