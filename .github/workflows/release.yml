@@ -3,7 +3,7 @@ name: Release
 # Publishes @franciscosolis/braces to npm when a v* tag is pushed. Authenticates
 # with npm trusted publishing (OIDC), so no npm token is stored in GitHub.
 # The trusted publisher must be configured on npmjs.com for this repository
-# and this workflow file (release.yml).
+# with this workflow file (release.yml) and the npm environment.
 #
 # Tests run in a separate job without id-token, because the repository has
 # no lockfile and devDependencies are resolved at install time. The publish
@@ -33,6 +33,9 @@ jobs:
   publish:
     needs: test
     runs-on: ubuntu-latest
+    # Waits for a required reviewer. The name must match the environment set
+    # in the npm trusted publisher.
+    environment: npm
     permissions:
       contents: read
       id-token: write
