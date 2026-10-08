@@ -30,7 +30,7 @@ describe('braces.parse()', () => {
     it('should accept nesting up to max depth', () => {
       const input = '{a,'.repeat(MAX_DEPTH) + 'a' + '}'.repeat(MAX_DEPTH);
       assert.equal(braces(input, { expand: true }).length, MAX_DEPTH + 1);
-      assert.doesNotThrow(() => braces(input));
+      braces(input);
     });
   });
 
