@@ -32,7 +32,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 </details>
 
-## [3.0.5] - Unreleased
+## [3.0.5] - 2026-10-08
 
 **Security**
 
