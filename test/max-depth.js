@@ -33,9 +33,9 @@ describe('max depth', () => {
   describe('strings', () => {
     it('should accept nesting up to max depth', () => {
       const input = nestedBraces(MAX_DEPTH);
-      assert.doesNotThrow(() => braces(input));
-      assert.doesNotThrow(() => braces.parse(input));
-      assert.doesNotThrow(() => braces.compile(input));
+      braces(input);
+      braces.parse(input);
+      braces.compile(input);
       assert.equal(braces.expand(input).length, MAX_DEPTH + 1);
     });
 
@@ -65,8 +65,8 @@ describe('max depth', () => {
 
   describe('ASTs', () => {
     it('should accept ASTs up to max depth', () => {
-      assert.doesNotThrow(() => braces.compile(nestedAst(MAX_DEPTH)));
-      assert.doesNotThrow(() => braces.stringify(nestedAst(MAX_DEPTH)));
+      braces.compile(nestedAst(MAX_DEPTH));
+      braces.stringify(nestedAst(MAX_DEPTH));
       assert.equal(braces.expand(nestedAst(MAX_DEPTH)).length, MAX_DEPTH + 1);
     });
 
@@ -99,7 +99,7 @@ describe('max depth', () => {
       assert.throws(() => braces.expand(nestedBraces(6), options), SyntaxError);
 
       for (const fn of walkers) {
-        assert.doesNotThrow(() => braces[fn](nestedAst(5), options));
+        braces[fn](nestedAst(5), options);
         assert.throws(() => braces[fn](nestedAst(6), options), SyntaxError);
       }
     });
