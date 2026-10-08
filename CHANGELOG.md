@@ -32,6 +32,12 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 </details>
 
+## [3.0.6] - 2026-10-08
+
+**Changed**
+
+- Published from GitHub Actions through npm trusted publishing, with a [provenance attestation](https://docs.npmjs.com/generating-provenance-statements) that links the package to the commit and workflow that built it. Check it with `npm audit signatures`. The code is the same as in 3.0.5.
+
 ## [3.0.5] - 2026-10-08
 
 **Security**
@@ -209,6 +215,7 @@ v3.0 is a complete refactor, resulting in a faster, smaller codebase, with fewer
 
 - first commit
 
+[3.0.6]: https://github.com/Im-Fran/braces/compare/v3.0.5...v3.0.6
 [3.0.5]: https://github.com/Im-Fran/braces/compare/3.0.4...v3.0.5
 [3.0.4]: https://github.com/Im-Fran/braces/compare/3.0.3...3.0.4
 [3.0.3]: https://github.com/micromatch/braces/compare/3.0.2...3.0.3
