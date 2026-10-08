@@ -29,11 +29,12 @@ The fork follows upstream. To review and bring in upstream changes:
 ```sh
 $ git remote add upstream https://github.com/micromatch/braces.git
 $ git fetch upstream
-$ git log master..upstream/master
+$ git log dev..upstream/master
+$ git checkout -b im-fran/chore/sync-upstream origin/dev
 $ git merge upstream/master
 ```
 
-Always merge; never rebase the published history onto upstream.
+Then open a pull request into `dev`. Always merge; never rebase the published history onto upstream.
 
 ## Install
 
