@@ -44,7 +44,7 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 **Changed**
 
-- Published on npm as [`@im-fran/braces`](https://www.npmjs.com/package/@im-fran/braces), a maintained fork of `braces`, since upstream declined to fix the vulnerability ([micromatch/braces#70](https://github.com/micromatch/braces/issues/70)). Use it through an `npm:` alias override; see "About this fork" in the README.
+- Published on npm as [`@franciscosolis/braces`](https://www.npmjs.com/package/@franciscosolis/braces), a maintained fork of `braces`, since upstream declined to fix the vulnerability ([micromatch/braces#70](https://github.com/micromatch/braces/issues/70)). Use it through an `npm:` alias override; see "About this fork" in the README.
 
 ## [3.0.4] - 2026-10-07
 

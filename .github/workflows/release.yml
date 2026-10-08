@@ -1,6 +1,6 @@
 name: Release
 
-# Publishes @im-fran/braces to npm when a v* tag is pushed. Authenticates
+# Publishes @franciscosolis/braces to npm when a v* tag is pushed. Authenticates
 # with npm trusted publishing (OIDC), so no npm token is stored in GitHub.
 # The trusted publisher must be configured on npmjs.com for this repository
 # and this workflow file (release.yml).
