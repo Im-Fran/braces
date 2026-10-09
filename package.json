@@ -60,7 +60,6 @@
   "devDependencies": {
     "ansi-colors": "^3.2.4",
     "bash-path": "^2.0.1",
-    "gulp-format-md": "^2.0.0",
     "mocha": "^6.1.1"
   },
   "keywords": [
@@ -86,18 +85,5 @@
     "range",
     "ranges",
     "sh"
-  ],
-  "verb": {
-    "toc": false,
-    "layout": "default",
-    "tasks": [
-      "readme"
-    ],
-    "lint": {
-      "reflinks": true
-    },
-    "plugins": [
-      "gulp-format-md"
-    ]
-  }
+  ]
 }
