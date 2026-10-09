@@ -32,6 +32,12 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 </details>
 
+## [3.1.1] - 2026-10-08
+
+**Changed**
+
+- Rewrite the README for the fork.
+
 ## [3.1.0] - 2026-10-08
 
 **Added**
@@ -230,6 +236,7 @@ v3.0 is a complete refactor, resulting in a faster, smaller codebase, with fewer
 
 - first commit
 
+[3.1.1]: https://github.com/Im-Fran/braces/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/Im-Fran/braces/compare/v3.0.6...v3.1.0
 [3.0.6]: https://github.com/Im-Fran/braces/compare/v3.0.5...v3.0.6
 [3.0.5]: https://github.com/Im-Fran/braces/compare/3.0.4...v3.0.5

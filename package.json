@@ -1,7 +1,7 @@
 {
   "name": "@franciscosolis/braces",
   "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "homepage": "https://github.com/Im-Fran/braces",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "contributors": [
