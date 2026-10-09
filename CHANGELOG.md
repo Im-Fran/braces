@@ -32,6 +32,21 @@ Changelog entries are classified using the following labels _(from [keep-a-chang
 
 </details>
 
+## [3.1.0] - 2026-10-08
+
+**Added**
+
+- TypeScript declarations (`index.d.ts`), referenced from `"types"`. `@types/braces` only applies to the unscoped `braces` package.
+- ESM entry point (`index.mjs`). Named imports such as `import { expand } from '@franciscosolis/braces'` now work. It re-exports the CommonJS build, so `import` and `require` share one instance.
+
+**Changed**
+
+- Added an `"exports"` map to `package.json`. The root, `./lib/*` (with or without `.js`) and `./package.json` stay reachable; any other path inside the package now throws `ERR_PACKAGE_PATH_NOT_EXPORTED` on Node >= 12.17.
+
+**Fixed**
+
+- Remove a leftover `console.log` that `compile` printed for close nodes marked `isClose`, reachable with ASTs passed in directly.
+
 ## [3.0.6] - 2026-10-08
 
 **Changed**
@@ -215,6 +230,7 @@ v3.0 is a complete refactor, resulting in a faster, smaller codebase, with fewer
 
 - first commit
 
+[3.1.0]: https://github.com/Im-Fran/braces/compare/v3.0.6...v3.1.0
 [3.0.6]: https://github.com/Im-Fran/braces/compare/v3.0.5...v3.0.6
 [3.0.5]: https://github.com/Im-Fran/braces/compare/3.0.4...v3.0.5
 [3.0.4]: https://github.com/Im-Fran/braces/compare/3.0.3...3.0.4
