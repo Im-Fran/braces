@@ -10,7 +10,8 @@ const path = require('path');
 const code = `
 import braces, { parse, stringify, compile, expand, create } from '@franciscosolis/braces';
 import { createRequire } from 'module';
-const cjs = createRequire(import.meta.url)('@franciscosolis/braces');
+// import.meta.url is undefined under -e before node 18, so anchor on the cwd.
+const cjs = createRequire(process.cwd() + '/')('@franciscosolis/braces');
 if (braces !== cjs) throw new Error('default export is not the CommonJS instance');
 for (const [name, fn] of Object.entries({ parse, stringify, compile, expand, create })) {
   if (fn !== cjs[name]) throw new Error(name + ' is not the CommonJS function');

@@ -34,7 +34,12 @@
       "import": "./index.mjs",
       "require": "./index.js"
     },
-    "./lib/*.js": "./lib/*.js",
+    "./lib/compile.js": "./lib/compile.js",
+    "./lib/constants.js": "./lib/constants.js",
+    "./lib/expand.js": "./lib/expand.js",
+    "./lib/parse.js": "./lib/parse.js",
+    "./lib/stringify.js": "./lib/stringify.js",
+    "./lib/utils.js": "./lib/utils.js",
     "./lib/*": "./lib/*.js",
     "./package.json": "./package.json"
   },
